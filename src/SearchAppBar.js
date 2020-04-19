@@ -12,12 +12,11 @@ import SearchIcon from '@material-ui/icons/Search';
 import Divider from "@material-ui/core/Divider";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Collapse from "@material-ui/core/Collapse";
+import {ExpandLess, ExpandMore} from "@material-ui/icons";
 
 const drawerWidth = 240;
 
@@ -123,19 +122,31 @@ const useStyles = makeStyles((theme) => ({
         }),
         marginLeft: 0,
     },
+    nested: {
+        paddingLeft: theme.spacing(4),
+    },
 }));
 
 export default function SearchAppBar({open, setOpen}) {
     const classes = useStyles();
     const theme = useTheme();
+    const [openExample, setOpenExample] = React.useState(true);
+    const [openAcessibilidade, setOpenAcessibilidade] = React.useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
     };
-
     const handleDrawerClose = () => {
         setOpen(false);
     };
+
+    const handleExampleDrawOpen = () => {
+        setOpenExample(!openExample);
+    }
+
+    const handleAcessibilidadeDrawOpen = () => {
+        setOpenAcessibilidade(!openAcessibilidade);
+    }
 
     return (
         <div>
@@ -188,23 +199,53 @@ export default function SearchAppBar({open, setOpen}) {
                     </IconButton>
                 </div>
                 <Divider/>
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                            <ListItemText primary={text}/>
+                <ListItem button onClick={handleExampleDrawOpen}>
+                    <ListItemText primary="Exemplos" />
+                    {openExample ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={openExample} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Login" />
                         </ListItem>
-                    ))}
-                </List>
-                <Divider/>
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                            <ListItemText primary={text}/>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Home" />
                         </ListItem>
-                    ))}
-                </List>
+                    </List>
+                </Collapse>
+                <ListItem button onClick={handleAcessibilidadeDrawOpen}>
+                    <ListItemText primary="Acessibilidade" />
+                    {openAcessibilidade ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={openAcessibilidade} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Geral" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Deficiencia Auditiva" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Deficiencia Visual" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Deficiencia Cognitiva" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem button className={classes.nested}>
+                            <ListItemText primary="Social" />
+                        </ListItem>
+                    </List>
+                </Collapse>
             </Drawer>
         </div>
     );

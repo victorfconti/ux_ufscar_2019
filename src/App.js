@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         display: 'flex',
+        backgroundColor: theme.palette.background.paper,
+        nested: {
+            paddingLeft: theme.spacing(4),
+        },
     },
     content: {
         flexGrow: 1,
@@ -43,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
 function App() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(window.innerWidth > 760);
-
 
     return (
       <div className={classes.root}>
