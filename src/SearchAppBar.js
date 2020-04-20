@@ -17,6 +17,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Collapse from "@material-ui/core/Collapse";
 import {ExpandLess, ExpandMore} from "@material-ui/icons";
+import Rux from "./assets/RUX.svg"
 
 const drawerWidth = 240;
 
@@ -166,8 +167,9 @@ export default function SearchAppBar({open, setOpen}) {
                     >
                         <MenuIcon/>
                     </IconButton>
+                    <img src={Rux} alt={"Logo"} height={50}/>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        UX DO MUNDO REAL
+                        &nbsp;&nbsp;UX DO MUNDO REAL
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
