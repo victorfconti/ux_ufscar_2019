@@ -3,6 +3,9 @@ import SearchAppBar from "./SearchAppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import clsx from "clsx";
 import {makeStyles} from "@material-ui/core/styles";
+import Breadcrumbs from "@material-ui/core/Breadcrumbs";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 const drawerWidth = 240;
 
@@ -58,6 +61,13 @@ function AppTODO() {
                      })}
                  >
                      <div className={classes.drawerHeader}/>
+                     <Breadcrumbs aria-label="breadcrumb">
+                         <Link color="inherit" href="/exemplo">
+                             Exemplo
+                         </Link>
+                         <Typography color="textPrimary">Futuro</Typography>
+                     </Breadcrumbs>
+
                      <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
                          <h2>Em Construção</h2>
                          <p>Essa funcionalidade será implementada na próxima versão</p>

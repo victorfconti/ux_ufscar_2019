@@ -4,6 +4,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import clsx from "clsx";
 import {makeStyles} from "@material-ui/core/styles";
 import Examples from "./assets/examples.jpg"
+import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
+import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 
 const drawerWidth = 240;
 
@@ -59,6 +62,9 @@ function AppExemplo() {
                      })}
                  >
                      <div className={classes.drawerHeader}/>
+                     <Breadcrumbs aria-label="breadcrumb">
+                         <Typography color="textPrimary">Exemplo</Typography>
+                     </Breadcrumbs>
                      <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
                          <h2>Exemplos</h2>
                          <p>Você poderá navegar em um site visualizando seu código e análisando as boas práticas, importante realizar as etapas na sequencia sugerida</p>

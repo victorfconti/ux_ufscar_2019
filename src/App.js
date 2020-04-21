@@ -81,7 +81,7 @@ function App() {
                   sistema, aumentando assim a experiencia do usuário e contemplando milhares de novos usuários.
               </Typography>
               <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                  <Button onClick="/inicio" variant="contained" color="primary">Começar</Button>
+                  <Button onClick="/exemplo" variant="contained" color="primary">Começar</Button>
               </div>
           </main>
       </div>
