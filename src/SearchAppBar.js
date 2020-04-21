@@ -218,13 +218,8 @@ export default function SearchAppBar({open, setOpen}) {
                 </ListItem>
                 <Collapse in={openExample} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
+                        <ListItem onClick={()=>window.location.href="/exemplo/login"} button className={classes.nested}>
                             <ListItemText primary="Login" />
-                        </ListItem>
-                    </List>
-                    <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Home" />
                         </ListItem>
                     </List>
                 </Collapse>
@@ -234,28 +229,18 @@ export default function SearchAppBar({open, setOpen}) {
                 </ListItem>
                 <Collapse in={openAcessibilidade} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Geral" />
+                        <ListItem onClick={()=>window.location.href='/acessibilidade'} button className={classes.nested}>
+                            <ListItemText  primary="Geral" />
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
+                        <ListItem onClick={()=>window.location.href='/acessibilidade/auditiva'} button className={classes.nested}>
                             <ListItemText primary="Deficiencia Auditiva" />
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
+                        <ListItem onClick={()=>window.location.href='/acessibilidade/visual'} button className={classes.nested}>
                             <ListItemText primary="Deficiencia Visual" />
-                        </ListItem>
-                    </List>
-                    <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Deficiencia Cognitiva" />
-                        </ListItem>
-                    </List>
-                    <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Social" />
                         </ListItem>
                     </List>
                 </Collapse>
