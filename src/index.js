@@ -9,6 +9,7 @@ import AppAcessibilidade from './AppAcessibilidade'
 import AppAcessibilidadeVisual from "./AppAcessibilidadeVisual";
 import AppAcessibilidadeAuditiva from "./AppAcessibilidadeAuditiva";
 import AppLogin from "./AppLogin";
+import AppExemplo from "./AppExemplo";
 
 ReactDOM.render(
     <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Route path="/acessibilidade" exact={true} component={AppAcessibilidade}/>
             <Route path="/acessibilidade/visual" exact={true} component={AppAcessibilidadeVisual}/>
             <Route path="/acessibilidade/auditiva" exact={true} component={AppAcessibilidadeAuditiva}/>
+            <Route path="/exemplo" exact={true} component={AppExemplo}/>
             <Route path="/exemplo/login" exact={true} component={AppLogin}/>
         </Switch>
     </BrowserRouter>,

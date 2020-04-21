@@ -81,6 +81,11 @@ function AppAcessibilidade() {
                     Por fim temos uma sessão inteira voltada a dicas de acessibilidade que você pode usar no seu
                     sistema, aumentando assim a experiencia do usuário e contemplando milhares de novos usuários.
                 </Typography>
+                <h3>
+                    Referencial
+                </h3>
+                <a style={{font: "smaller"}} href="https://www.saude.gov.br/acessibilidade">Ministério da educação</a>
+
             </main>
         </div>
     );

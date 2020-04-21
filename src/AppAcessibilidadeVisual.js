@@ -81,10 +81,6 @@ function AppAcessibilidadeVisual() {
                     um sistema. Exibindo seu resultado final, e o código de cada componente, além de explicações
                     sobre as diretivas.
                 </Typography>
-                <Typography paragraph>
-                    Por fim temos uma sessão inteira voltada a dicas de acessibilidade que você pode usar no seu
-                    sistema, aumentando assim a experiencia do usuário e contemplando milhares de novos usuários.
-                </Typography>
             </main>
         </div>
     );

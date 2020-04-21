@@ -218,6 +218,11 @@ export default function SearchAppBar({open, setOpen}) {
                 </ListItem>
                 <Collapse in={openExample} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
+                        <ListItem onClick={()=>window.location.href="/exemplo"} button className={classes.nested}>
+                            <ListItemText primary="Exemplos" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
                         <ListItem onClick={()=>window.location.href="/exemplo/login"} button className={classes.nested}>
                             <ListItemText primary="Login" />
                         </ListItem>
