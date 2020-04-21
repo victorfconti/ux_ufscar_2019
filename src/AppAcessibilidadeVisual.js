@@ -69,18 +69,27 @@ function AppAcessibilidadeVisual() {
                     <Typography color="textPrimary">Visual</Typography>
                 </Breadcrumbs>
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                    <h1>Acessibilidade</h1>
+                    <h1>Acessibilidade Visual</h1>
                 </div>
                 <Typography paragraph>
-                    Nosso projeto tem como finalidade prover uma plataforma onde os interessados no desenvolvimento de
-                    interfaces para o usuário possam estudar e se atualizar, de uma maneira prática e divertira, que
-                    une a teoria a prática.
+                    Pessoas com problemas de visão, dificuldades para ler ou temporariamente não conseguem ler podem usar um leitor de tela.
+                    Os leitores de tela verbalizarão o conteúdo visível e o lerão em voz alta.
+                    O texto do parágrafo e botão, bem como o conteúdo oculto, como texto alternativo para ícones e títulos, são identificados pelo programa.
+                    O conteúdo pode ser rotulado para otimizar a experiência daqueles que usam leitores de tela ou experimentam uma versão somente
+                    texto da sua interface do usuário.
                 </Typography>
                 <Typography paragraph>
-                    Para isso possuimos nossa seção de exemplo, onde iremos mostrar exemplos de criação de partes de
-                    um sistema. Exibindo seu resultado final, e o código de cada componente, além de explicações
-                    sobre as diretivas.
+                    O texto alternativo “atributo alt em uma tag html” ajuda a converter uma interface visual em uma interface baseada em texto.
+                    O texto alternativo é um rótulo curto (até 125 caracteres) no código que descreve uma imagem para usuários que não conseguem vê-los.
+                    Um leitor de tela lerá o texto alternativo em voz alta no lugar da imagem.
+                    Inclua palavras-chave específicas para ajudar a informar o usuário sobre a imagem.
+                    Palavras-chave também podem melhorar a otimização de mecanismo de busca.
                 </Typography>
+                <h4>Dica</h4>
+                <p style={{font: "smaller"}}>
+                    Quando o texto visível e o não visível é descritivo e significativo, ajuda os usuários a navegar usando títulos ou links em uma tela.
+                    Um leitor de tela pode ajudá-lo a testar o texto de acessibilidade e identificar lugares onde você pode adicioná-lo.
+                </p>
             </main>
         </div>
     );
