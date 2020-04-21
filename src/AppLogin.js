@@ -116,11 +116,13 @@ function AppLogin() {
                              onClose={handleCloseDialogTitle}
                              aria-labelledby="responsive-dialog-title"
                          >
-                             <DialogTitle id="responsive-dialog-title">{"Use Google's location service?"}</DialogTitle>
+                             <DialogTitle id="responsive-dialog-title">{"Titulo"}</DialogTitle>
                              <DialogContent>
                                  <DialogContentText>
-                                     Let Google help apps determine location. This means sending anonymous location data to
-                                     Google, even when no apps are running.
+                                     <h3>Código</h3>
+                                     <code>&lt;h2&gt;Login&lt;/h2&gt;</code>
+                                     <h3>Diretiva</h3>
+                                     <p>Descrição simples e intuitiva.</p>
                                  </DialogContentText>
                              </DialogContent>
                              <DialogActions>
@@ -129,7 +131,7 @@ function AppLogin() {
                                  </Button>
                              </DialogActions>
                          </Dialog>
-                         <TextField id="standard-basic" label="Usuário" />
+                         <TextField id="usuario_txt" tabIndex={1} label="Usuário" />
                          <HelpIcon onClick={handleClickOpenDialogUsuario} style={{cursor: "pointer"}} color="primary" />
                          <Dialog
                              fullScreen={fullScreen}
@@ -137,11 +139,13 @@ function AppLogin() {
                              onClose={handleCloseDialogUsuario}
                              aria-labelledby="responsive-dialog-title"
                          >
-                             <DialogTitle id="responsive-dialog-title">{"Use Google's location service?"}</DialogTitle>
+                             <DialogTitle id="responsive-dialog-title">{"Usuário"}</DialogTitle>
                              <DialogContent>
                                  <DialogContentText>
-                                     Let Google help apps determine location. This means sending anonymous location data to
-                                     Google, even when no apps are running.
+                                     <h3>Código</h3>
+                                     <code>&lt;TextField id=&quot;usuario_txt&quot; tabIndex={1} label=&quot;Usu&aacute;rio&quot; /&gt;</code>
+                                     <h3>Diretiva</h3>
+                                    <p>Utilize uma boa descriação posicionada acima do campo no lado esquerdo, além de um tab index com a posição do campo.</p>
                                  </DialogContentText>
                              </DialogContent>
                              <DialogActions>
@@ -151,7 +155,7 @@ function AppLogin() {
                              </DialogActions>
                          </Dialog>
                          <p/>
-                         <TextField label="Senha"  type="password"/>
+                         <TextField id={"senha_field"} tabIndex={2} label="Senha"  type="password"/>
                          <HelpIcon onClick={handleClickOpenDialogSenha} style={{cursor: "pointer"}} color="primary" />
                          <Dialog
                              fullScreen={fullScreen}
@@ -159,11 +163,14 @@ function AppLogin() {
                              onClose={handleCloseDialogSenha}
                              aria-labelledby="responsive-dialog-title"
                          >
-                             <DialogTitle id="responsive-dialog-title">{"Use Google's location service?"}</DialogTitle>
+                             <DialogTitle id="responsive-dialog-title">{"Senha"}</DialogTitle>
                              <DialogContent>
                                  <DialogContentText>
-                                     Let Google help apps determine location. This means sending anonymous location data to
-                                     Google, even when no apps are running.
+                                     <h3>Código</h3>
+                                     <code>&lt;TextField id=&quot;senha_field&quot; tabIndex={2} label=&quot;Senha&quot; type=&quot;password&quot;/&gt;</code>
+                                    <h3>Diretiva</h3>
+                                     <p>Utilize uma boa descriação posicionada acima do campo no lado esquerdo, além de um tab index com a posição do campo,
+                                     e o tipo de campo password, para manter a senha oculta.</p>
                                  </DialogContentText>
                              </DialogContent>
                              <DialogActions>
@@ -173,7 +180,7 @@ function AppLogin() {
                              </DialogActions>
                          </Dialog>
                          <p/>
-                         <Button style={{width: "220px"}} variant="contained" color="primary">Login</Button>
+                         <Button id="login_btt" style={{width: "220px"}} variant="contained" color="primary">Login</Button>
                          <HelpIcon onClick={handleClickOpenDialogLogin} style={{cursor: "pointer"}} color="primary" />
                          <Dialog
                              fullScreen={fullScreen}
@@ -181,11 +188,14 @@ function AppLogin() {
                              onClose={handleCloseDialogLogin}
                              aria-labelledby="responsive-dialog-title"
                          >
-                             <DialogTitle id="responsive-dialog-title">{"Use Google's location service?"}</DialogTitle>
+                             <DialogTitle id="responsive-dialog-title">{"Login"}</DialogTitle>
                              <DialogContent>
                                  <DialogContentText>
-                                     Let Google help apps determine location. This means sending anonymous location data to
-                                     Google, even when no apps are running.
+                                     <h3>Código</h3>
+                                     <code>&lt;Button id=&quot;login_btt&quot; variant=&quot;contained&quot; color=&quot;primary&quot;&gt;Login&lt;/Button&gt;</code>
+                                     <h3>Diretiva</h3>
+                                     <p>Utilize um botão na parte inferior do formulário, porém evite um botão de limpar, para tornar o visual
+                                      mais simples e evitar funções desnecessárias.</p>
                                  </DialogContentText>
                              </DialogContent>
                              <DialogActions>
