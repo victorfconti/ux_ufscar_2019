@@ -227,6 +227,21 @@ export default function SearchAppBar({open, setOpen}) {
                             <ListItemText primary="Login" />
                         </ListItem>
                     </List>
+                    <List component="div" disablePadding>
+                        <ListItem onClick={()=>window.location.href="/exemplo/cadastro"} button className={classes.nested}>
+                            <ListItemText primary="Cadastro" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem onClick={()=>window.location.href="/exemplo/consulta"} button className={classes.nested}>
+                            <ListItemText primary="Consulta" />
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem onClick={()=>window.location.href="/exemplo/grafico"} button className={classes.nested}>
+                            <ListItemText primary="Gráfico" />
+                        </ListItem>
+                    </List>
                 </Collapse>
                 <ListItem button onClick={handleAcessibilidadeDrawOpen}>
                     <ListItemText primary="Acessibilidade" />
@@ -240,12 +255,12 @@ export default function SearchAppBar({open, setOpen}) {
                     </List>
                     <List component="div" disablePadding>
                         <ListItem onClick={()=>window.location.href='/acessibilidade/auditiva'} button className={classes.nested}>
-                            <ListItemText primary="Deficiencia Auditiva" />
+                            <ListItemText primary="Auditiva" />
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
                         <ListItem onClick={()=>window.location.href='/acessibilidade/visual'} button className={classes.nested}>
-                            <ListItemText primary="Deficiencia Visual" />
+                            <ListItemText primary="Visual" />
                         </ListItem>
                     </List>
                 </Collapse>

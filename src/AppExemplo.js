@@ -3,16 +3,7 @@ import SearchAppBar from "./SearchAppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import clsx from "clsx";
 import {makeStyles} from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import HelpIcon from '@material-ui/icons/Help';
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogActions from "@material-ui/core/DialogActions";
-import {useMediaQuery} from "@material-ui/core";
-import { useTheme } from '@material-ui/core/styles';
+import Examples from "./assets/examples.jpg"
 
 const drawerWidth = 240;
 
@@ -51,51 +42,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         textAlign: 'center'
     },
-
 }));
 
 function AppExemplo() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(window.innerWidth > 760);
-    const [openDialogTitle, setOpenDialogTitle] = React.useState(false);
-    const [openDialogUsuario, setOpenDialogUsuario] = React.useState(false);
-    const [openDialogSenha, setOpenDialogSenha] = React.useState(false);
-    const [openDialogLogin, setOpenDialogLogin] = React.useState(false);
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
-    const handleClickOpenDialogTitle = () => {
-        setOpenDialogTitle(true);
-    };
-
-    const handleCloseDialogTitle = () => {
-        setOpenDialogTitle(false);
-    };
-
-    const handleClickOpenDialogUsuario = () => {
-        setOpenDialogUsuario(true);
-    };
-
-    const handleCloseDialogUsuario = () => {
-        setOpenDialogUsuario(false);
-    };
-
-    const handleClickOpenDialogSenha = () => {
-        setOpenDialogSenha(true);
-    };
-
-    const handleCloseDialogSenha = () => {
-        setOpenDialogSenha(false);
-    };
-
-    const handleClickOpenDialogLogin = () => {
-        setOpenDialogLogin(true);
-    };
-
-    const handleCloseDialogLogin = () => {
-        setOpenDialogLogin(false);
-    };
-
 
     return (
         <div className={classes.root}>
@@ -109,102 +60,43 @@ function AppExemplo() {
                  >
                      <div className={classes.drawerHeader}/>
                      <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                         <h2>Login <HelpIcon onClick={handleClickOpenDialogTitle} style={{cursor: "pointer"}} color="primary" /></h2>
-                         <Dialog
-                             fullScreen={fullScreen}
-                             open={openDialogTitle}
-                             onClose={handleCloseDialogTitle}
-                             aria-labelledby="responsive-dialog-title"
-                         >
-                             <DialogTitle id="responsive-dialog-title">{"Titulo"}</DialogTitle>
-                             <DialogContent>
-                                 <DialogContentText>
-                                     <h3>Código</h3>
-                                     <code>&lt;h2&gt;Login&lt;/h2&gt;</code>
-                                     <h3>Diretiva</h3>
-                                     <p>Descrição simples e intuitiva.</p>
-                                 </DialogContentText>
-                             </DialogContent>
-                             <DialogActions>
-                                 <Button autoFocus onClick={handleCloseDialogTitle} color="primary">
-                                     Fechar
-                                 </Button>
-                             </DialogActions>
-                         </Dialog>
-                         <TextField id="usuario_txt" tabIndex={1} label="Usuário" />
-                         <HelpIcon onClick={handleClickOpenDialogUsuario} style={{cursor: "pointer"}} color="primary" />
-                         <Dialog
-                             fullScreen={fullScreen}
-                             open={openDialogUsuario}
-                             onClose={handleCloseDialogUsuario}
-                             aria-labelledby="responsive-dialog-title"
-                         >
-                             <DialogTitle id="responsive-dialog-title">{"Usuário"}</DialogTitle>
-                             <DialogContent>
-                                 <DialogContentText>
-                                     <h3>Código</h3>
-                                     <code>&lt;TextField id=&quot;usuario_txt&quot; tabIndex={1} label=&quot;Usu&aacute;rio&quot; /&gt;</code>
-                                     <h3>Diretiva</h3>
-                                    <p>Utilize uma boa descriação posicionada acima do campo no lado esquerdo, além de um tab index com a posição do campo.</p>
-                                 </DialogContentText>
-                             </DialogContent>
-                             <DialogActions>
-                                 <Button autoFocus onClick={handleCloseDialogUsuario} color="primary">
-                                     Fechar
-                                 </Button>
-                             </DialogActions>
-                         </Dialog>
-                         <p/>
-                         <TextField id={"senha_field"} tabIndex={2} label="Senha"  type="password"/>
-                         <HelpIcon onClick={handleClickOpenDialogSenha} style={{cursor: "pointer"}} color="primary" />
-                         <Dialog
-                             fullScreen={fullScreen}
-                             open={openDialogSenha}
-                             onClose={handleCloseDialogSenha}
-                             aria-labelledby="responsive-dialog-title"
-                         >
-                             <DialogTitle id="responsive-dialog-title">{"Senha"}</DialogTitle>
-                             <DialogContent>
-                                 <DialogContentText>
-                                     <h3>Código</h3>
-                                     <code>&lt;TextField id=&quot;senha_field&quot; tabIndex={2} label=&quot;Senha&quot; type=&quot;password&quot;/&gt;</code>
-                                    <h3>Diretiva</h3>
-                                     <p>Utilize uma boa descriação posicionada acima do campo no lado esquerdo, além de um tab index com a posição do campo,
-                                     e o tipo de campo password, para manter a senha oculta.</p>
-                                 </DialogContentText>
-                             </DialogContent>
-                             <DialogActions>
-                                 <Button autoFocus onClick={handleCloseDialogSenha} color="primary">
-                                     Fechar
-                                 </Button>
-                             </DialogActions>
-                         </Dialog>
-                         <p/>
-                         <Button id="login_btt" style={{width: "220px"}} variant="contained" color="primary">Login</Button>
-                         <HelpIcon onClick={handleClickOpenDialogLogin} style={{cursor: "pointer"}} color="primary" />
-                         <Dialog
-                             fullScreen={fullScreen}
-                             open={openDialogLogin}
-                             onClose={handleCloseDialogLogin}
-                             aria-labelledby="responsive-dialog-title"
-                         >
-                             <DialogTitle id="responsive-dialog-title">{"Login"}</DialogTitle>
-                             <DialogContent>
-                                 <DialogContentText>
-                                     <h3>Código</h3>
-                                     <code>&lt;Button id=&quot;login_btt&quot; variant=&quot;contained&quot; color=&quot;primary&quot;&gt;Login&lt;/Button&gt;</code>
-                                     <h3>Diretiva</h3>
-                                     <p>Utilize um botão na parte inferior do formulário, porém evite um botão de limpar, para tornar o visual
-                                      mais simples e evitar funções desnecessárias.</p>
-                                 </DialogContentText>
-                             </DialogContent>
-                             <DialogActions>
-                                 <Button autoFocus onClick={handleCloseDialogLogin} color="primary">
-                                     Fechar
-                                 </Button>
-                             </DialogActions>
-                         </Dialog>
-
+                         <h2>Exemplos</h2>
+                         <p>Você poderá navegar em um site visualizando seu código e análisando as boas práticas, importante realizar as etapas na sequencia sugerida</p>
+                         <br/>
+                         <br/>
+                         <div style={{display: "flex"}}>
+                             <div style={{textAlign: "left", width: window.innerWidth < 760?"100%":"50%"}}>
+                                 <div>
+                                     <i className="bx bx-shield"></i>
+                                     <h4><a href="/exemplo/login">1 - Login</a></h4>
+                                     <p>Fazer a autenticação para usar um determinado sistema ou serviço. O login é feito
+                                         com o nome de usuário e com a senha que foi escolhida</p>
+                                 </div>
+                                 <div>
+                                     <i className="bx bx-receipt"></i>
+                                     <h4><a href="/exemplo/cadastro">2 - Cadastro</a></h4>
+                                     <p>Refere-se a qualquer registro detalhado de entidades, normalmente pessoas: clientes
+                                         de uma empresa ou estabelecimento comercial, alunos de uma escola, frequentadores
+                                         de uma biblioteca etc...</p>
+                                 </div>
+                                 <div>
+                                     <i className="bx bx-cube-alt"></i>
+                                     <h4><a href="/exemplo/consulta">3 - Consulta</a></h4>
+                                     <p>Método que permite ter acesso aos dados de uma base de dados e realizar diversas
+                                         ações com a informação.</p>
+                                 </div>
+                                 <div>
+                                     <i className="bx bx-images"></i>
+                                     <h4><a href="/exemplo/grafico">4 - Gráfico</a></h4>
+                                     <p>Representação geométrica de um conjunto de dados usada para facilitar a compreensão
+                                         das informações apresentadas nesse conjunto. Gráficos ajudam a identificar padrões,
+                                         verificar resultados e comparar medidas de forma ágil.</p>
+                                 </div>
+                             </div>
+                             <div style={{display: window.innerWidth < 760?"None":"Block", width: "50%"}}>
+                                <img src={Examples} width={"500px"} alt={"Exemplo"}/>
+                             </div>
+                         </div>
                      </div>
                  </main>
         </div>

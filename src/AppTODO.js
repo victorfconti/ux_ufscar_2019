@@ -2,9 +2,7 @@ import React from 'react';
 import SearchAppBar from "./SearchAppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import clsx from "clsx";
-import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
-import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 
 const drawerWidth = 240;
 
@@ -43,10 +41,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         textAlign: 'center'
     },
-
 }));
 
-function AppAcessibilidade() {
+function AppTODO() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(window.innerWidth > 760);
 
@@ -55,30 +52,19 @@ function AppAcessibilidade() {
             <CssBaseline/>
             <SearchAppBar open={open} setOpen={setOpen}>
             </SearchAppBar>
-            <main
-                className={clsx(classes.content, {
-                    [classes.contentShift]: open,
-                })}
-            >
-                <div className={classes.drawerHeader}/>
-                <Breadcrumbs aria-label="breadcrumb">
-                    <Typography color="textPrimary">Acessibilidade</Typography>
-                </Breadcrumbs>
-                <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                    <h1>Acessibilidade</h1>
-                </div>
-                <Typography paragraph>
-                    A acessibilidade permite que usuários de diversas habilidades naveguem, entendam e usem sua interface.
-                    Melhorar a acessibilidade do seu produto pode melhorar a usabilidade de todos os usuários, incluindo aqueles com baixa visão, cegueira, deficiência auditiva, cognitiva, motora ou situacional.
-                </Typography>
-                <h3>
-                    Referencial
-                </h3>
-                <a style={{font: "smaller"}} href="https://www.saude.gov.br/acessibilidade">Ministério da educação</a>
-
-            </main>
+                 <main
+                     className={clsx(classes.content, {
+                         [classes.contentShift]: open,
+                     })}
+                 >
+                     <div className={classes.drawerHeader}/>
+                     <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
+                         <h2>Em Construção</h2>
+                         <p>Essa funcionalidade será implementada na próxima versão</p>
+                     </div>
+                 </main>
         </div>
     );
 }
 
-export default AppAcessibilidade;
+export default AppTODO;
