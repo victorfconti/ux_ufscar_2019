@@ -212,6 +212,11 @@ export default function SearchAppBar({open, setOpen}) {
                     </IconButton>
                 </div>
                 <Divider/>
+                <List component="div">
+                    <ListItem onClick={()=>window.location.href="/"} button>
+                        <ListItemText primary="Inicio" />
+                    </ListItem>
+                </List>
                 <ListItem button onClick={handleExampleDrawOpen}>
                     <ListItemText primary="Exemplos" />
                     {openExample ? <ExpandLess /> : <ExpandMore />}
