@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import Rux from "./assets/RUX.svg"
+import Button from "@material-ui/core/Button";
 
 const drawerWidth = 240;
 
@@ -79,6 +80,9 @@ function App() {
                     Por fim temos uma sessão inteira voltada a dicas de acessibilidade que você pode usar no seu
                   sistema, aumentando assim a experiencia do usuário e contemplando milhares de novos usuários.
               </Typography>
+              <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
+                  <Button variant="contained" color="primary">Começar</Button>
+              </div>
           </main>
       </div>
   );

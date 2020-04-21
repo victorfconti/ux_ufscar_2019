@@ -134,6 +134,16 @@ export default function SearchAppBar({open, setOpen}) {
     const [openExample, setOpenExample] = React.useState(true);
     const [openAcessibilidade, setOpenAcessibilidade] = React.useState(false);
 
+    const redirectHome = () => {
+        window.location.href="/";
+    }
+
+    const redirectSearch = (event) => {
+        if (event.key === 'Enter') {
+            window.location.href = "/search";
+        }
+    }
+
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -167,7 +177,7 @@ export default function SearchAppBar({open, setOpen}) {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <img src={Rux} alt={"Logo"} height={50}/>
+                    <img style={{cursor: "pointer"}} onClick={redirectHome} src={Rux} alt={"Logo"} height={50}/>
                     <Typography className={classes.title} variant="h6" noWrap>
                         &nbsp;&nbsp;UX DO MUNDO REAL
                     </Typography>
@@ -176,6 +186,7 @@ export default function SearchAppBar({open, setOpen}) {
                             <SearchIcon/>
                         </div>
                         <InputBase
+                            onKeyPress={redirectSearch}
                             placeholder="Search…"
                             classes={{
                                 root: classes.inputRoot,
