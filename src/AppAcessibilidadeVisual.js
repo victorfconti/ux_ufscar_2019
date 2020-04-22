@@ -85,6 +85,14 @@ function AppAcessibilidadeVisual() {
                     Inclua palavras-chave específicas para ajudar a informar o usuário sobre a imagem.
                     Palavras-chave também podem melhorar a otimização de mecanismo de busca.
                 </Typography>
+                <Typography paragraph>
+                    Para muitos desenvolvedores, acessibilidade consiste em aderir a algumas orientações que garantam a acessibilidade aos Leitores de Tela.
+                    Até certo ponto isto pode ser compreensível. Usuário com problemas visuais podem ter a maior parte dos problemas resolvidos,
+                    porem essas informações podem ser apresentadas ainda em forma de vídeos, áudio e animações.
+                    Atualmente já existe uma grande quantidade de conteúdo em vídeo disponível na maioria dos portais de entretenimento do mundo,
+                    infelizmente para aqueles que são surdos, este conteúdo sem uma legenda é inacessível. As ferramentas para legendar vídeos para internet existem,
+                    e os conceitos sobre o uso de legendas também já existe a décadas inclusive é requerida por lei em alguns países.
+                </Typography>
                 <h4>Dica</h4>
                 <p style={{font: "smaller"}}>
                     Quando o texto visível e o não visível é descritivo e significativo, ajuda os usuários a navegar usando títulos ou links em uma tela.

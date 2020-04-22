@@ -18,6 +18,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Collapse from "@material-ui/core/Collapse";
 import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import Rux from "./assets/RUX.svg"
+import MailIcon from '@material-ui/icons/Mail';
+import MoreIcon from '@material-ui/icons/MoreVert';
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import InfoIcon from '@material-ui/icons/Info';
+
 
 const drawerWidth = 240;
 
@@ -126,6 +132,18 @@ const useStyles = makeStyles((theme) => ({
     nested: {
         paddingLeft: theme.spacing(4),
     },
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex',
+        },
+    },
+    sectionMobile: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
 }));
 
 export default function SearchAppBar({open, setOpen}) {
@@ -133,9 +151,13 @@ export default function SearchAppBar({open, setOpen}) {
     const theme = useTheme();
     const [openExample, setOpenExample] = React.useState(true);
     const [openAcessibilidade, setOpenAcessibilidade] = React.useState(false);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const isMenuOpen = Boolean(anchorEl);
+    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     const redirectHome = () => {
-        window.location.href="/";
+        window.location.href = "/";
     }
 
     const redirectSearch = (event) => {
@@ -158,6 +180,58 @@ export default function SearchAppBar({open, setOpen}) {
     const handleAcessibilidadeDrawOpen = () => {
         setOpenAcessibilidade(!openAcessibilidade);
     }
+
+    const handleMobileMenuOpen = (event) => {
+        setMobileMoreAnchorEl(event.currentTarget);
+    };
+    const handleMobileMenuClose = () => {
+        setMobileMoreAnchorEl(null);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+        handleMobileMenuClose();
+    };
+
+    const menuId = 'primary-search-account-menu';
+    const renderMenu = (
+        <Menu
+            anchorEl={anchorEl}
+            anchorOrigin={{vertical: 'top', horizontal: 'right'}}
+            id={menuId}
+            keepMounted
+            transformOrigin={{vertical: 'top', horizontal: 'right'}}
+            open={isMenuOpen}
+            onClose={handleMenuClose}
+        >
+        </Menu>
+    );
+
+    const mobileMenuId = 'primary-search-account-menu-mobile';
+    const renderMobileMenu = (
+        <Menu
+            anchorEl={mobileMoreAnchorEl}
+            anchorOrigin={{vertical: 'top', horizontal: 'right'}}
+            id={mobileMenuId}
+            keepMounted
+            transformOrigin={{vertical: 'top', horizontal: 'right'}}
+            open={isMobileMenuOpen}
+            onClose={handleMobileMenuClose}
+        >
+            <MenuItem onClick={()=>window.location.href="/contato"} >
+                <IconButton aria-label="contato" color="inherit">
+                    <MailIcon/>
+                </IconButton>
+                <p>Contato</p>
+            </MenuItem>
+            <MenuItem onClick={()=>window.location.href="/sobre"}>
+                <IconButton aria-label="sobre" color="inherit">
+                    <InfoIcon/>
+                </IconButton>
+                <p>Sobre</p>
+            </MenuItem>
+        </Menu>
+    );
 
     return (
         <div>
@@ -195,8 +269,30 @@ export default function SearchAppBar({open, setOpen}) {
                             inputProps={{'aria-label': 'search'}}
                         />
                     </div>
+                    <div className={classes.grow}/>
+                    <div className={classes.sectionDesktop}>
+                        <IconButton onClick={()=>window.location.href="/contato"} aria-label="Contato" color="inherit" placeholder={"Contato"}>
+                           <MailIcon/>
+                        </IconButton>
+                        <IconButton onClick={()=>window.location.href="/sobre"} aria-label="Sobre" color="inherit" placeholder={"Sobre"}>
+                            <InfoIcon/>
+                        </IconButton>
+                    </div>
+                    <div className={classes.sectionMobile}>
+                        <IconButton
+                            aria-label="show more"
+                            aria-controls={mobileMenuId}
+                            aria-haspopup="true"
+                            onClick={handleMobileMenuOpen}
+                            color="inherit"
+                        >
+                            <MoreIcon/>
+                        </IconButton>
+                    </div>
                 </Toolbar>
             </AppBar>
+            {renderMobileMenu}
+            {renderMenu}
             <Drawer
                 className={classes.drawer}
                 variant="persistent"
@@ -213,59 +309,66 @@ export default function SearchAppBar({open, setOpen}) {
                 </div>
                 <Divider/>
                 <List component="div">
-                    <ListItem onClick={()=>window.location.href="/"} button>
-                        <ListItemText primary="Inicio" />
+                    <ListItem onClick={() => window.location.href = "/"} button>
+                        <ListItemText primary="Inicio"/>
                     </ListItem>
                 </List>
                 <ListItem button onClick={handleExampleDrawOpen}>
-                    <ListItemText primary="Exemplos" />
-                    {openExample ? <ExpandLess /> : <ExpandMore />}
+                    <ListItemText primary="Exemplos"/>
+                    {openExample ? <ExpandLess/> : <ExpandMore/>}
                 </ListItem>
                 <Collapse in={openExample} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href="/exemplo"} button className={classes.nested}>
-                            <ListItemText primary="Exemplos" />
+                        <ListItem onClick={() => window.location.href = "/exemplo"} button className={classes.nested}>
+                            <ListItemText primary="Exemplos"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href="/exemplo/login"} button className={classes.nested}>
-                            <ListItemText primary="Login" />
+                        <ListItem onClick={() => window.location.href = "/exemplo/login"} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Login"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href="/exemplo/cadastro"} button className={classes.nested}>
-                            <ListItemText primary="Cadastro" />
+                        <ListItem onClick={() => window.location.href = "/exemplo/cadastro"} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Cadastro"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href="/exemplo/consulta"} button className={classes.nested}>
-                            <ListItemText primary="Consulta" />
+                        <ListItem onClick={() => window.location.href = "/exemplo/consulta"} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Consulta"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href="/exemplo/grafico"} button className={classes.nested}>
-                            <ListItemText primary="Gráfico" />
+                        <ListItem onClick={() => window.location.href = "/exemplo/grafico"} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Gráfico"/>
                         </ListItem>
                     </List>
                 </Collapse>
                 <ListItem button onClick={handleAcessibilidadeDrawOpen}>
-                    <ListItemText primary="Acessibilidade" />
-                    {openAcessibilidade ? <ExpandLess /> : <ExpandMore />}
+                    <ListItemText primary="Acessibilidade"/>
+                    {openAcessibilidade ? <ExpandLess/> : <ExpandMore/>}
                 </ListItem>
                 <Collapse in={openAcessibilidade} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href='/acessibilidade'} button className={classes.nested}>
-                            <ListItemText  primary="Geral" />
+                        <ListItem onClick={() => window.location.href = '/acessibilidade'} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Geral"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href='/acessibilidade/auditiva'} button className={classes.nested}>
-                            <ListItemText primary="Auditiva" />
+                        <ListItem onClick={() => window.location.href = '/acessibilidade/auditiva'} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Auditiva"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={()=>window.location.href='/acessibilidade/visual'} button className={classes.nested}>
-                            <ListItemText primary="Visual" />
+                        <ListItem onClick={() => window.location.href = '/acessibilidade/visual'} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Visual"/>
                         </ListItem>
                     </List>
                 </Collapse>

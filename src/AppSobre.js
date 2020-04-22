@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
+import Rux from "./assets/RUX.svg";
 
 const drawerWidth = 240;
 
@@ -69,22 +70,12 @@ function AppSobre() {
                     <Typography color="textPrimary">Visual</Typography>
                 </Breadcrumbs>
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                    <h1>Acessibilidade</h1>
+                    <img src={Rux} alt={"Logo"} />
+                    <h1>Usabilidade do mundo real</h1>
+                    <Typography paragraph>
+                        Este site é um projeto feito para a disciplina de usabilidade do curso de especialização em sistema web. Assine nossa newsletter
+                    </Typography>
                 </div>
-                <Typography paragraph>
-                    Nosso projeto tem como finalidade prover uma plataforma onde os interessados no desenvolvimento de
-                    interfaces para o usuário possam estudar e se atualizar, de uma maneira prática e divertira, que
-                    une a teoria a prática.
-                </Typography>
-                <Typography paragraph>
-                    Para isso possuimos nossa seção de exemplo, onde iremos mostrar exemplos de criação de partes de
-                    um sistema. Exibindo seu resultado final, e o código de cada componente, além de explicações
-                    sobre as diretivas.
-                </Typography>
-                <Typography paragraph>
-                    Por fim temos uma sessão inteira voltada a dicas de acessibilidade que você pode usar no seu
-                    sistema, aumentando assim a experiencia do usuário e contemplando milhares de novos usuários.
-                </Typography>
             </main>
         </div>
     );
