@@ -261,7 +261,7 @@ export default function SearchAppBar({open, setOpen}) {
                         </div>
                         <InputBase
                             onKeyPress={redirectSearch}
-                            placeholder="Search…"
+                            placeholder="Pesquisar…"
                             classes={{
                                 root: classes.inputRoot,
                                 input: classes.inputInput,
@@ -310,39 +310,39 @@ export default function SearchAppBar({open, setOpen}) {
                 <Divider/>
                 <List component="div">
                     <ListItem onClick={() => window.location.href = "/"} button>
-                        <ListItemText primary="Inicio"/>
+                        <ListItemText primary="Início"/>
                     </ListItem>
                 </List>
                 <ListItem button onClick={handleExampleDrawOpen}>
-                    <ListItemText primary="Exemplos"/>
+                    <ListItemText primary="Sistema"/>
                     {openExample ? <ExpandLess/> : <ExpandMore/>}
                 </ListItem>
                 <Collapse in={openExample} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/exemplo"} button className={classes.nested}>
-                            <ListItemText primary="Exemplos"/>
+                        <ListItem onClick={() => window.location.href = "/sistema"} button className={classes.nested}>
+                            <ListItemText primary="Módulos"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/exemplo/login"} button
+                        <ListItem onClick={() => window.location.href = "/sistema/login"} button
                                   className={classes.nested}>
                             <ListItemText primary="Login"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/exemplo/cadastro"} button
+                        <ListItem onClick={() => window.location.href = "/sistema/cadastro"} button
                                   className={classes.nested}>
                             <ListItemText primary="Cadastro"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/exemplo/consulta"} button
+                        <ListItem onClick={() => window.location.href = "/sistema/consulta"} button
                                   className={classes.nested}>
                             <ListItemText primary="Consulta"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/exemplo/grafico"} button
+                        <ListItem onClick={() => window.location.href = "/sistema/grafico"} button
                                   className={classes.nested}>
                             <ListItemText primary="Gráfico"/>
                         </ListItem>

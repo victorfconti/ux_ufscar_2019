@@ -63,6 +63,9 @@ function AppAcessibilidadeVisual() {
             >
                 <div className={classes.drawerHeader}/>
                 <Breadcrumbs aria-label="breadcrumb">
+                    <Link color="inherit" href="/">
+                        Início
+                    </Link>
                     <Link color="inherit" href="/acessibilidade">
                         Acessibilidade
                     </Link>

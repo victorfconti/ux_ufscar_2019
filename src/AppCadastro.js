@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function AppTODO() {
+function AppCadastro() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(window.innerWidth > 760);
 
@@ -62,14 +62,17 @@ function AppTODO() {
                  >
                      <div className={classes.drawerHeader}/>
                      <Breadcrumbs aria-label="breadcrumb">
-                         <Link color="inherit" href="/exemplo">
-                             Exemplo
+                         <Link color="inherit" href="/">
+                             Início
                          </Link>
-                         <Typography color="textPrimary">Futuro</Typography>
+                         <Link color="inherit" href="/sistema">
+                             Sistema
+                         </Link>
+                         <Typography color="textPrimary">Cadastro</Typography>
                      </Breadcrumbs>
 
                      <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                         <h2>Em Construção</h2>
+                         <h2>Cadastro</h2>
                          <p>Essa funcionalidade será implementada na próxima versão</p>
                      </div>
                  </main>
@@ -77,4 +80,4 @@ function AppTODO() {
     );
 }
 
-export default AppTODO;
+export default AppCadastro;
