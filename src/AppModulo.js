@@ -146,7 +146,7 @@ function AppModulo() {
                 width: "50%",
               }}
             >
-              <img src={Examples} width={"500px"} alt={"Sistema"} />
+              <img src={Examples} width={"500px"} alt={"Hora de começar a desenvolver vamos colocar as mãos na massa"} />
             </div>
           </div>
         </div>

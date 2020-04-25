@@ -70,7 +70,7 @@ function AppSobre() {
                     <Typography color="textPrimary">Visual</Typography>
                 </Breadcrumbs>
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                    <img src={Rux} alt={"Logo"} />
+                    <img src={Rux} alt={"Logotipo formulado utilizado as iniciais de Real User Experiencie onde o X representa a junção do usuário ao mundo real"} />
                     <h1>Usabilidade do mundo real</h1>
                     <Typography paragraph>
                         Este site é um projeto feito para a disciplina de usabilidade do curso de especialização em sistema web. Assine nossa newsletter

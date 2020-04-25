@@ -72,7 +72,7 @@ function AppAcessibilidadeVisual() {
                     <Typography color="textPrimary">Visual</Typography>
                 </Breadcrumbs>
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                    <h1>Acessibilidade Visual</h1>
+                    <h2>Acessibilidade Visual</h2>
                 </div>
                 <Typography paragraph>
                     Pessoas com problemas de visão, dificuldades para ler ou temporariamente não conseguem ler podem usar um leitor de tela.

@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SearchAppBar({open, setOpen}) {
     const classes = useStyles();
     const theme = useTheme();
-    const [openExample, setOpenExample] = React.useState(true);
+    const [openSistema, setOpenSistema] = React.useState(true);
     const [openAcessibilidade, setOpenAcessibilidade] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const isMenuOpen = Boolean(anchorEl);
@@ -173,8 +173,8 @@ export default function SearchAppBar({open, setOpen}) {
         setOpen(false);
     };
 
-    const handleExampleDrawOpen = () => {
-        setOpenExample(!openExample);
+    const handleSistemaDrawOpen = () => {
+        setOpenSistema(!openSistema);
     }
 
     const handleAcessibilidadeDrawOpen = () => {
@@ -251,7 +251,7 @@ export default function SearchAppBar({open, setOpen}) {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <img style={{cursor: "pointer"}} onClick={redirectHome} src={Rux} alt={"Logo"} height={50}/>
+                    <img style={{cursor: "pointer"}} onClick={redirectHome} src={Rux} alt={"Logotipo formulado utilizado as iniciais de Real User Experiencie onde o X representa a junção do usuário ao mundo real"} height={50}/>
                     <Typography className={classes.title} variant="h6" noWrap>
                         &nbsp;&nbsp;UX DO MUNDO REAL
                     </Typography>
@@ -313,11 +313,11 @@ export default function SearchAppBar({open, setOpen}) {
                         <ListItemText primary="Início"/>
                     </ListItem>
                 </List>
-                <ListItem button onClick={handleExampleDrawOpen}>
+                <ListItem button onClick={handleSistemaDrawOpen}>
                     <ListItemText primary="Sistema"/>
-                    {openExample ? <ExpandLess/> : <ExpandMore/>}
+                    {openSistema ? <ExpandLess/> : <ExpandMore/>}
                 </ListItem>
-                <Collapse in={openExample} timeout="auto" unmountOnExit>
+                <Collapse in={openSistema} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                         <ListItem onClick={() => window.location.href = "/sistema"} button className={classes.nested}>
                             <ListItemText primary="Módulos"/>
@@ -348,13 +348,14 @@ export default function SearchAppBar({open, setOpen}) {
                         </ListItem>
                     </List>
                 </Collapse>
+                
                 <ListItem button onClick={handleAcessibilidadeDrawOpen}>
                     <ListItemText primary="Acessibilidade"/>
                     {openAcessibilidade ? <ExpandLess/> : <ExpandMore/>}
                 </ListItem>
                 <Collapse in={openAcessibilidade} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = '/acessibilidade'} button
+                <List component="div" disablePadding>
+                    <ListItem onClick={() => window.location.href = '/acessibilidade'} button
                                   className={classes.nested}>
                             <ListItemText primary="Geral"/>
                         </ListItem>

@@ -69,24 +69,22 @@ function AppAcessibilidadeAuditiva() {
                     <Link color="inherit" href="/acessibilidade">
                         Acessibilidade
                     </Link>
-                    <Typography color="textPrimary">Visual</Typography>
+                    <Typography color="textPrimary">Auditiva</Typography>
                 </Breadcrumbs>
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
-                    <h1>Acessibilidade</h1>
+                    <h2>Acessibilidade Auditiva</h2>
                 </div>
                 <Typography paragraph>
-                    Nosso projeto tem como finalidade prover uma plataforma onde os interessados no desenvolvimento de
-                    interfaces para o usuário possam estudar e se atualizar, de uma maneira prática e divertira, que
-                    une a teoria a prática.
+                   Para muitos desenvolvedores, acessibilidade consiste em aderir a algumas orientações que garantam a 
+                   acessibilidade aos Leitores de Tela. Até certo ponto isto pode ser compreensível. Usuário com 
+                   problemas visuais podem ter a maior parte dos problemas resolvidos, porem essas informações 
+                   podem ser apresentadas ainda em forma de vídeos, áudio e animações.
                 </Typography>
                 <Typography paragraph>
-                    Para isso possuimos nossa seção de exemplo, onde iremos mostrar exemplos de criação de partes de
-                    um sistema. Exibindo seu resultado final, e o código de cada componente, além de explicações
-                    sobre as diretivas.
-                </Typography>
-                <Typography paragraph>
-                    Por fim temos uma sessão inteira voltada a dicas de acessibilidade que você pode usar no seu
-                    sistema, aumentando assim a experiencia do usuário e contemplando milhares de novos usuários.
+                   Atualmente já existe uma grande quantidade de conteúdo em vídeo disponível na maioria dos portais de 
+                   entretenimento do mundo, infelizmente para aqueles que são surdos, este conteúdo sem uma legenda é 
+                   inacessível. As ferramentas para legendar vídeos para internet existem, e os conceitos sobre o uso 
+                   de legendas também já existe a décadas inclusive é requerida por lei em alguns países.
                 </Typography>
             </main>
         </div>
