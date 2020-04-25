@@ -26,3 +26,13 @@ N
 src/AppAcessibilidadeVisual.js,4/0/403eded13bddfb03e4e5432548d2d63ae3f94ad2
 ?
 src/AppLogin.js,5/4/54001da6d6423fa19d9e5cd44d867bac12c83860
+>
+src/AppTODO.js,c/7/c73facaa91c867fb971f8e2af1cbab360059d41a
+A
+src/AppExemplo.js,8/a/8a2350db1272a0d49df4266f574f9704a8cabc79
+?
+src/App.test.js,9/2/923703ced91ac38943d37930d9d27a7ebe8f01ad
+?
+src/AppSobre.js,3/f/3ff5b52384f7fc909bde44d49899133dfdaa5630
+A
+src/AppContato.js,a/1/a1ebcaa941a0986ec2710441faa80555fe484a87
