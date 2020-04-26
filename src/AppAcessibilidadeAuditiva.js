@@ -73,18 +73,7 @@ function AppAcessibilidadeAuditiva() {
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
                     <h2>Acessibilidade Auditiva</h2>
                 </div>
-                <Typography paragraph>
-                   Para muitos desenvolvedores, acessibilidade consiste em aderir a algumas orientações que garantam a 
-                   acessibilidade aos Leitores de Tela. Até certo ponto isto pode ser compreensível. Usuário com 
-                   problemas visuais podem ter a maior parte dos problemas resolvidos, porem essas informações 
-                   podem ser apresentadas ainda em forma de vídeos, áudio e animações.
-                </Typography>
-                <Typography paragraph>
-                   Atualmente já existe uma grande quantidade de conteúdo em vídeo disponível na maioria dos portais de 
-                   entretenimento do mundo, infelizmente para aqueles que são surdos, este conteúdo sem uma legenda é 
-                   inacessível. As ferramentas para legendar vídeos para internet existem, e os conceitos sobre o uso 
-                   de legendas também já existe a décadas inclusive é requerida por lei em alguns países.
-                </Typography>
+                <p>Essa funcionalidade será implementada na próxima versão</p>
             </main>
         </div>
     );
