@@ -61,6 +61,13 @@ function AppSearch() {
             >
                 <div className={classes.drawerHeader}/>
 
+                <Typography paragraph>
+                    <text style={{fontSize: "xx-large"}}>Resultados</text><br/>
+                    <text style={{fontSize: "smaller"}}>4 resultados encontrados</text>
+                </Typography>
+
+                <br/>
+
                 <Typography paragraph style={{"border-radius": "10px", background: "#F5F5F5", padding: "10px"}}>
                     <a href="/login">Login</a><br/>
                     <text style={{fontSize: "smaller"}}>Um exemplo de implementação de um sistema de login</text>
