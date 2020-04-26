@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import HelpIcon from "@material-ui/icons/Help";
+import HelpIcon from '@material-ui/icons/Info';
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -146,6 +146,8 @@ function AppLogin() {
                 <code>&lt;h2&gt;Login&lt;/h2&gt;</code>
                 <h3>Diretiva</h3>
                 <p>Descrição simples e intuitiva.</p>
+                <h3>Fonte</h3>
+                <a href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -183,6 +185,8 @@ function AppLogin() {
                   Utilize uma boa descrição posicionada acima do campo no lado
                   esquerdo, além de um tab index com a posição do campo.
                 </p>
+                <h3>Fonte</h3>
+                <a href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -227,6 +231,8 @@ function AppLogin() {
                   esquerdo, além de um tab index com a posição do campo, e o
                   tipo de campo password, para manter a senha oculta.
                 </p>
+                <h3>Fonte</h3>
+                <a href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -274,6 +280,8 @@ function AppLogin() {
                   um botão de limpar, para tornar o visual mais simples e evitar
                   funções desnecessárias.
                 </p>
+                <h3>Fonte</h3>
+                <a href={"https://material.io/components/buttons"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
