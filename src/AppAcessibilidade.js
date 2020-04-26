@@ -54,8 +54,7 @@ function AppAcessibilidade() {
     return (
         <div className={classes.root}>
             <CssBaseline/>
-            <SearchAppBar open={open} setOpen={setOpen}>
-            </SearchAppBar>
+            <SearchAppBar open={open} setOpen={setOpen} menua_item={7}/>
             <main
                 className={clsx(classes.content, {
                     [classes.contentShift]: open,

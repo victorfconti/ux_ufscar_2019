@@ -54,7 +54,7 @@ function AppAcessibilidadeVisual() {
     return (
         <div className={classes.root}>
             <CssBaseline/>
-            <SearchAppBar open={open} setOpen={setOpen}>
+            <SearchAppBar open={open} setOpen={setOpen} menua_item={8}>
             </SearchAppBar>
             <main
                 className={clsx(classes.content, {

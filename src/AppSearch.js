@@ -52,7 +52,7 @@ function AppSearch() {
     return (
         <div className={classes.root}>
             <CssBaseline/>
-            <SearchAppBar open={open} setOpen={setOpen}>
+            <SearchAppBar open={open} setOpen={setOpen} menua_item={1}>
             </SearchAppBar>
             <main
                 className={clsx(classes.content, {

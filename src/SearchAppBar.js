@@ -146,11 +146,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SearchAppBar({open, setOpen}) {
+export default function SearchAppBar({open, setOpen, menua_item}) {
     const classes = useStyles();
     const theme = useTheme();
-    const [openSistema, setOpenSistema] = React.useState(true);
-    const [openAcessibilidade, setOpenAcessibilidade] = React.useState(false);
+    const [openSistema, setOpenSistema] = React.useState(menua_item >=2 && menua_item <= 6);
+    const [openAcessibilidade, setOpenAcessibilidade] = React.useState(menua_item >= 7);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const isMenuOpen = Boolean(anchorEl);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -361,15 +361,15 @@ export default function SearchAppBar({open, setOpen}) {
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = '/acessibilidade/auditiva'} button
-                                  className={classes.nested}>
-                            <ListItemText primary="Auditiva"/>
-                        </ListItem>
-                    </List>
-                    <List component="div" disablePadding>
                         <ListItem onClick={() => window.location.href = '/acessibilidade/visual'} button
                                   className={classes.nested}>
                             <ListItemText primary="Visual"/>
+                        </ListItem>
+                    </List>
+                    <List component="div" disablePadding>
+                        <ListItem onClick={() => window.location.href = '/acessibilidade/auditiva'} button
+                                  className={classes.nested}>
+                            <ListItemText primary="Auditiva"/>
                         </ListItem>
                     </List>
                 </Collapse>
