@@ -63,12 +63,6 @@ function AppSobre() {
                 })}
             >
                 <div className={classes.drawerHeader}/>
-                <Breadcrumbs aria-label="breadcrumb">
-                    <Link color="inherit" href="/acessibilidade">
-                        Acessibilidade
-                    </Link>
-                    <Typography color="textPrimary">Visual</Typography>
-                </Breadcrumbs>
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
                     <img src={Rux} alt={"Logotipo formulado utilizado as iniciais de Real User Experiencie onde o X representa a junção do usuário ao mundo real"} />
                     <h1>Usabilidade do mundo real</h1>

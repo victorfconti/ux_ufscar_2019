@@ -309,7 +309,7 @@ export default function SearchAppBar({open, setOpen, menua_item}) {
                 </div>
                 <Divider/>
                 <List component="div">
-                    <ListItem onClick={() => window.location.href = "/"} button>
+                    <ListItem style={{backgroundColor: menua_item===1?"#dadee3":"inherit"}} onClick={() => window.location.href = "/"} button>
                         <ListItemText primary="Início"/>
                     </ListItem>
                 </List>
@@ -319,30 +319,30 @@ export default function SearchAppBar({open, setOpen, menua_item}) {
                 </ListItem>
                 <Collapse in={openSistema} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/sistema"} button className={classes.nested}>
+                        <ListItem style={{backgroundColor: menua_item===2?"#dadee3":"inherit"}} onClick={() => window.location.href = "/sistema"} button className={classes.nested}>
                             <ListItemText primary="Módulos"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/sistema/login"} button
+                        <ListItem style={{backgroundColor: menua_item===3?"#dadee3":"inherit"}} onClick={() => window.location.href = "/sistema/login"} button
                                   className={classes.nested}>
                             <ListItemText primary="Login"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/sistema/cadastro"} button
+                        <ListItem style={{backgroundColor: menua_item===4?"#dadee3":"inherit"}} onClick={() => window.location.href = "/sistema/cadastro"} button
                                   className={classes.nested}>
                             <ListItemText primary="Cadastro"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/sistema/consulta"} button
+                        <ListItem style={{backgroundColor: menua_item===5?"#dadee3":"inherit"}} onClick={() => window.location.href = "/sistema/consulta"} button
                                   className={classes.nested}>
                             <ListItemText primary="Consulta"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = "/sistema/grafico"} button
+                        <ListItem style={{backgroundColor: menua_item===6?"#dadee3":"inherit"}} onClick={() => window.location.href = "/sistema/grafico"} button
                                   className={classes.nested}>
                             <ListItemText primary="Gráfico"/>
                         </ListItem>
@@ -355,19 +355,19 @@ export default function SearchAppBar({open, setOpen, menua_item}) {
                 </ListItem>
                 <Collapse in={openAcessibilidade} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItem onClick={() => window.location.href = '/acessibilidade'} button
+                    <ListItem style={{backgroundColor: menua_item===7?"#dadee3":"inherit"}} onClick={() => window.location.href = '/acessibilidade'} button
                                   className={classes.nested}>
                             <ListItemText primary="Geral"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = '/acessibilidade/visual'} button
+                        <ListItem style={{backgroundColor: menua_item===8?"#dadee3":"inherit"}} onClick={() => window.location.href = '/acessibilidade/visual'} button
                                   className={classes.nested}>
                             <ListItemText primary="Visual"/>
                         </ListItem>
                     </List>
                     <List component="div" disablePadding>
-                        <ListItem onClick={() => window.location.href = '/acessibilidade/auditiva'} button
+                        <ListItem style={{backgroundColor: menua_item===9?"#dadee3":"inherit"}} onClick={() => window.location.href = '/acessibilidade/auditiva'} button
                                   className={classes.nested}>
                             <ListItemText primary="Auditiva"/>
                         </ListItem>
