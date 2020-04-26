@@ -77,7 +77,7 @@ function AppAcessibilidade() {
                 <h3>
                     Referencial
                 </h3>
-                <a style={{font: "smaller"}} href="https://www.saude.gov.br/acessibilidade">Ministério da educação</a>
+                <a style={{font: "smaller"}} href="https://www.saude.gov.br/acessibilidade" target="_blank">Ministério da educação</a>
 
             </main>
         </div>
