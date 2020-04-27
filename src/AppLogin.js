@@ -53,6 +53,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "center",
   },
+  a: {
+    color: "#0375B4",
+    textDecoration: "none",
+  },
+  "a:visited": {
+    color: "#061DC2",
+    textDecoration: "none",
+  }
 }));
 
 function AppLogin() {
@@ -147,7 +155,7 @@ function AppLogin() {
                 <h3>Diretiva</h3>
                 <p>Descrição simples e intuitiva.</p>
                 <h3>Fonte</h3>
-                <a href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
+                <a style={classes.a} href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -186,7 +194,7 @@ function AppLogin() {
                   esquerdo, além de um tab index com a posição do campo.
                 </p>
                 <h3>Fonte</h3>
-                <a href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
+                <a style={classes.a} href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -232,7 +240,7 @@ function AppLogin() {
                   tipo de campo password, para manter a senha oculta.
                 </p>
                 <h3>Fonte</h3>
-                <a href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
+                <a style={classes.a} href={"https://material.io/components/text-fields/"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -281,7 +289,7 @@ function AppLogin() {
                   funções desnecessárias.
                 </p>
                 <h3>Fonte</h3>
-                <a href={"https://material.io/components/buttons"} target={"_blank"}>Referência</a>
+                <a style={classes.a} href={"https://material.io/components/buttons"} target={"_blank"}>Referência</a>
               </DialogContentText>
             </DialogContent>
             <DialogActions>

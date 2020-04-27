@@ -55,7 +55,14 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         textAlign: 'center'
     },
-
+    a: {
+        color: "#0375B4",
+        textDecoration: "none",
+    },
+    "a:visited": {
+        color: "#061DC2",
+        textDecoration: "none",
+    }
 }));
 
 function AppAcessibilidadeVisual() {
@@ -179,7 +186,7 @@ function AppAcessibilidadeVisual() {
                                 Utilize alguma forma para permitir pessoas com deficiência de zoom no seu texto.
                             </p>
                             <h3>Fonte</h3>
-                            <a href={"https://material.io/design/usability/accessibility.html/"} target={"_blank"}>Referência</a>
+                            <a class={classes.a} href={"https://material.io/design/usability/accessibility.html/"} target={"_blank"}>Referência</a>
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>

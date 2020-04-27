@@ -44,6 +44,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "center",
   },
+  a: {
+    color: "#0375B4",
+    textDecoration: "none",
+  },
+  "a:visited": {
+    color: "#061DC2",
+    textDecoration: "none",
+  }
 }));
 
 function AppModulo() {
@@ -97,7 +105,7 @@ function AppModulo() {
               <div>
                 <i className="bx bx-shield"></i>
                 <h4>
-                  <a href="/sistema/login">1 - Login</a>
+                  <a class = {classes.a} href="/sistema/login">1 - Login</a>
                 </h4>
                 <p>
                   Fazer a autenticação para usar um determinado sistema ou
@@ -108,7 +116,7 @@ function AppModulo() {
               <div>
                 <i className="bx bx-receipt"></i>
                 <h4>
-                  <a href="/sistema/cadastro">2 - Cadastro</a>
+                  <a class = {classes.a} href="/sistema/cadastro">2 - Cadastro</a>
                 </h4>
                 <p>
                   Refere-se a qualquer registro detalhado de entidades,
@@ -120,7 +128,7 @@ function AppModulo() {
               <div>
                 <i className="bx bx-cube-alt"></i>
                 <h4>
-                  <a href="/sistema/consulta">3 - Consulta</a>
+                  <a class = {classes.a} href="/sistema/consulta">3 - Consulta</a>
                 </h4>
                 <p>
                   Método que permite ter acesso aos dados de uma base de dados e
@@ -130,7 +138,7 @@ function AppModulo() {
               <div>
                 <i className="bx bx-images"></i>
                 <h4>
-                  <a href="/sistema/grafico">4 - Gráfico</a>
+                  <a class = {classes.a} href="/sistema/grafico">4 - Gráfico</a>
                 </h4>
                 <p>
                   Representação geométrica de um conjunto de dados usada para

@@ -44,7 +44,14 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         textAlign: 'center'
     },
-
+    a: {
+        color: "#0375B4",
+        textDecoration: "none",
+    },
+    "a:visited": {
+        color: "#061DC2",
+        textDecoration: "none",
+    }
 }));
 
 function AppAcessibilidade() {
@@ -77,7 +84,7 @@ function AppAcessibilidade() {
                 <h3>
                     Referencial
                 </h3>
-                <a style={{font: "smaller"}} href="https://www.saude.gov.br/acessibilidade" target="_blank">Ministério da educação</a>
+                <a class={classes.a} style={{font: "smaller"}} href="https://material.io/design/usability/accessibility.html" target="_blank">Ministério da educação</a>
 
             </main>
         </div>
