@@ -3,12 +3,20 @@ import SearchAppBar from "./SearchAppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
-import {makeStyles} from "@material-ui/core/styles";
+import {makeStyles, useTheme} from "@material-ui/core/styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import {ZoomOut, ZoomIn} from "@material-ui/icons";
 import Slider from "@material-ui/core/Slider";
+import InfoIcon from '@material-ui/icons/Info';
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions";
+import Button from "@material-ui/core/Button";
+import {useMediaQuery} from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -54,6 +62,17 @@ function AppAcessibilidadeVisual() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(window.innerWidth > 760);
     const [value, setValue] = React.useState(1);
+    const [openDialogZoom, setOpenDialogZoom] = React.useState(false);
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+    const handleClickOpenDialogZoom = () => {
+        setOpenDialogZoom(true);
+    };
+
+    const handleCloseDialogZoom = () => {
+        setOpenDialogZoom(false);
+    };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -92,7 +111,88 @@ function AppAcessibilidadeVisual() {
                     <Grid item>
                         <ZoomIn />
                     </Grid>
+                    <Grid>
+                        <InfoIcon onClick={handleClickOpenDialogZoom}
+                                  style={{ cursor: "pointer" }}
+                                  color="primary"/>
+                    </Grid>
                 </Grid>
+                <Dialog
+                    fullScreen={fullScreen}
+                    open={openDialogZoom}
+                    onClose={handleCloseDialogZoom}
+                    aria-labelledby="responsive-dialog-title"
+                >
+                    <DialogTitle id="responsive-dialog-title">{"Usuário"}</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText>
+                            <h3>Código</h3>
+                            <pre>
+                                <code>
+                                    {'const [value, setValue] = React.useState(1);'}
+                                    <br/>
+                                    {'const handleChange = (event, newValue) => {'}
+                                    <br/>
+                                    {'    setValue(newValue);'}
+                                    <br/>
+                                    {'    const content_div = document.getElementById(\'content\');'}
+                                    <br/>
+                                    {'    content_div.style.fontSize = newValue+ \'rem\';'}
+                                    <br/>
+                                    {'};'}
+                                    <br/>
+                                    {'<Grid container spacing={2}>'}
+                                    <br/>
+                                    {'<Grid item>'}
+                                    <br/>
+                                    {'<ZoomOut />'}
+                                    <br/>
+                                    {'</Grid>'}
+                                    <br/>
+                                    {'<Grid item xs>'}
+                                    <br/>
+                                    {'<Slider min={1} max={10} value={value} onChange={handleChange} aria-labelledby=\'continuous-slider\' />'}
+                                    <br/>
+                                    {'</Grid>'}
+                                    <br/>
+                                    {'<Grid item>'}
+                                    <br/>
+                                    {'<ZoomIn />'}
+                                    <br/>
+                                    {'</Grid>'}
+                                    <br/>
+                                    {'<Grid>'}
+                                    <br/>
+                                    {'<InfoIcon onClick={handleClickOpenDialogZoom}'}
+                                    <br/>
+                                    {'style={{ cursor: &quot;pointer&quot; }}'}
+                                    <br/>
+                                    {'color=&quot;primary&quot;/>'}
+                                    <br/>
+                                    {'</Grid>'}
+                                    <br/>
+                                    {'</Grid>'}
+                                </code>
+                            </pre>
+                            <h3>Diretiva</h3>
+                            <p>
+                                Utilize alguma forma para permitir pessoas com deficiência de zoom no seu texto.
+                            </p>
+                            <h3>Fonte</h3>
+                            <a href={"https://material.io/design/usability/accessibility.html/"} target={"_blank"}>Referência</a>
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button
+                            autoFocus
+                            onClick={handleCloseDialogZoom}
+                            color="primary"
+                        >
+                            Fechar
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+
                 <div style={{align: 'center', alignSelf: 'center', alignContent: "center", textAlign: "center", alignItems: "center"}}>
                     <h2>Acessibilidade Visual</h2>
                 </div>
