@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="69.215201"
-     inkscape:cy="62.008735"
+     inkscape:cx="12.768248"
+     inkscape:cy="62.766349"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,7 +56,7 @@
      transform="translate(0,-263.13429)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:21.76533127px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.54413331"
+       style="font-style:normal;font-weight:normal;font-size:21.76533127px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.54413331;"
        x="0.49542046"
        y="279.10461"
        id="text12"><tspan
@@ -64,10 +64,10 @@
          id="tspan10"
          x="0.49542046"
          y="279.10461"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Oldania ADF Std';-inkscape-font-specification:'Oldania ADF Std';stroke-width:0.54413331;fill:#008000">R</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Oldania ADF Std';-inkscape-font-specification:'Oldania ADF Std';stroke-width:0.54413331;fill:#f0f0f0;fill-opacity:1;">R</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:21.28254318px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.53206354"
+       style="font-style:normal;font-weight:normal;font-size:21.28254318px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.53206354;"
        x="0.52932596"
        y="296.38174"
        id="text16"><tspan
@@ -75,10 +75,10 @@
          id="tspan14"
          x="0.52932596"
          y="296.38174"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Oldania ADF Std';-inkscape-font-specification:'Oldania ADF Std';stroke-width:0.53206354;fill:#008000">U</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Oldania ADF Std';-inkscape-font-specification:'Oldania ADF Std';stroke-width:0.53206354;fill:#f0f0f0;fill-opacity:1;">U</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:26.80639648px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.67015988"
+       style="font-style:normal;font-weight:normal;font-size:26.80639648px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.67015988;"
        x="14.211245"
        y="289.84616"
        id="text20"><tspan
@@ -86,12 +86,12 @@
          id="tspan18"
          x="14.211245"
          y="289.84616"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Oldania ADF Std';-inkscape-font-specification:'Oldania ADF Std';stroke-width:0.67015988;fill:#800080">X</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Oldania ADF Std';-inkscape-font-specification:'Oldania ADF Std';stroke-width:0.67015988;fill:#f0f0f0;fill-opacity:1;">X</tspan></text>
     <circle
        id="path22"
        cx="21.882692"
        cy="268.30289"
        r="2.8397388"
-       style="stroke-width:0.26458332;fill:#800080" />
+       style="stroke-width:0.26458332;fill:#f0f0f0;fill-opacity:1" />
   </g>
 </svg>

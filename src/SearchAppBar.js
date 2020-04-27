@@ -236,6 +236,7 @@ export default function SearchAppBar({open, setOpen, menua_item}) {
     return (
         <div>
             <AppBar
+                style={{backgroundColor: "#0375B4"}}
                 position="fixed"
                 className={clsx(classes.appBar, {
                     [classes.appBarShift]: open,
