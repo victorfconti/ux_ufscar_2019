@@ -4,7 +4,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
-import Rux from "./assets/RUX.svg";
+import Rux from "./assets/RUX Petro.svg";
 
 const drawerWidth = 240;
 
